@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    primary:
+      jdbc-url: jdbc:mysql://localhost:3306/test?autoReconnect=true&useUnicode=true&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+    secondary:
+      jdbc-url: jdbc:mysql://localhost:3306/alumni?autoReconnect=true&useUnicode=true&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
